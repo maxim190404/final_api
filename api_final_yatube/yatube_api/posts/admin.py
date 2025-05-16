@@ -23,7 +23,6 @@ class GroupAdmin(admin.ModelAdmin):
     list_display = (
         "title",
         "slug",
-        "description",
     )
     prepopulated_fields = {"slug": ("title",)}
     search_fields = ("slug",)
@@ -32,4 +31,4 @@ class GroupAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ("post", "author", "text", "created")
+    list_display = ("post", "author", "created")
