@@ -63,6 +63,6 @@ class FollowViewSet(CreateListViewSet):
             user=self.request.user,
             following=get_object_or_404(
                 User,
-                username=self.request.data["followng"]
+                username=self.request.data["following"]
             )
         )
